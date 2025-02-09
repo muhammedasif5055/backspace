@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, "Helvetica Neue", Roboto, Noto, Arial, sans-serif;
+        }
+
+        body {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            width: 100%;
+        }
+
+        .root-wrapper-best-instructors {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            padding: clamp(20px, 4vw, 40px);
+            gap: clamp(30px, 5vw, 60px);
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            overflow: hidden; /* Hide overflow content */
+        }
+
+        .right-instructors {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* Changed to contain to prevent overflow */
+            flex: 1;
+            min-width: 280px; /* Reduced min-width */
+            max-width: 600px;
+        }
+
+        .left-instructors {
+            flex: 1;
+            min-width: 280px; /* Reduced min-width */
+            max-width: 500px;
+            padding: clamp(15px, 3vw, 40px);
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(20px, 3vw, 40px);
+            width: 100%; /* Ensure it takes full width in mobile */
+        }
+
+        .best-instructors {
+            font-size: clamp(24px, 5vw, 36px);
+            font-family: Roboto, sans-serif;
+            font-weight: 900;
+            line-height: 1.2;
+            text-transform: capitalize;
+            word-wrap: break-word; /* Handle long words */
+        }
+
+        .supporting-text {
+            color: rgba(0, 0, 0, 0.75);
+            font-size: clamp(14px, 2vw, 16px);
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            text-transform: capitalize;
+            word-wrap: break-word; /* Handle long words */
+        }
+
+        .all-instructors {
+            position: relative;
+            display: flex;
+            gap: clamp(20px, 3vw, 30px);
+            align-items: flex-start;
+            width: 100%; /* Ensure full width */
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            border-radius: 10px;
+            background-color: rgb(8, 8, 8);
+            padding: clamp(12px, 2vw, 16px) clamp(16px, 3vw, 20px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            max-width: 100%; /* Prevent button overflow */
+            white-space: nowrap; /* Keep button text in one line */
+        }
+
+        .button:hover {
+            background-color: rgb(40, 40, 40);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .label-text {
+            color: white;
+            font-size: clamp(12px, 1.5vw, 14px);
+            font-family: Roboto, sans-serif;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .v6-icon-free {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: clamp(16px, 2vw, 20px);
+            height: clamp(16px, 2vw, 20px);
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+
+        .icon {
+            color: white;
+            font-size: clamp(14px, 1.5vw, 16px);
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover .icon {
+            transform: translateX(4px);
+        }
+
+        .instructor-image {
+            width: clamp(120px, 30vw, 174px);
+            height: auto;
+            object-fit: contain; /* Changed to contain to prevent overflow */
+            transition: transform 0.3s ease;
+            max-width: 100%; /* Ensure image doesn't overflow */
+        }
+
+        .instructor-image:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .root-wrapper-best-instructors {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .left-instructors {
+                align-items: center;
+                padding: 15px 10px;
+                width: 100%;
+            }
+            .right-instructors {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* Changed to contain to prevent overflow */
+            flex: 1;         
+            position: relative;
+            bottom: 15rem;
+        }
+            .all-instructors {
+                align-items: center;
+                width: 100%;
+            }
+
+            .supporting-text {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .button {
+                width: auto; /* Allow button to size based on content */
+                max-width: 90%; /* Prevent full width on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .root-wrapper-best-instructors {
+                padding: 10px;
+                gap: 15px;
+            }
+
+            .left-instructors {
+                padding: 10px;
+                gap: 15px;
+                min-width: unset; /* Remove min-width constraint */
+            }
+
+            .all-instructors {
+                gap: 15px;
+            }
+
+            .button {
+                padding: 10px 15px;
+            }
+
+            .instructor-image {
+                width: clamp(100px, 25vw, 140px); /* Smaller image on mobile */
+            }
+            .right-instructors {
+         
+            bottom: 21rem;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="root-wrapper-best-instructors">
+        <div class="left-instructors">
+            <h1 class="best-instructors">best Instructors</h1>
+            <p class="supporting-text">At the Academy, we strive to bring together the best professors for the best courses</p>
+            <div class="all-instructors">
+                <div class="button">
+                    <span class="label-text">all Instructors</span>
+                    <div class="v6-icon-free">
+                        <span class="icon">→</span>
+                    </div>
+                </div>
+                <img src="accets/instre.png" alt="Instructor" class="instructor-image">
+            </div>
+        </div>
+        <object type="image/svg+xml" data="right-instructors.svg" class="right-instructors"></object>
+    </div>
+
+    <script>
+        document.querySelector('.button').addEventListener('click', () => {
+            console.log('Navigate to all instructors page');
+        });
+
+        function loadImages() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (!img.complete) {
+                    img.style.opacity = '0';
+                    img.style.transition = 'opacity 0.3s ease';
+                }
+                img.addEventListener('load', () => {
+                    img.style.opacity = '1';
+                });
+            });
+        }
+
+        window.addEventListener('load', loadImages);
+    </script>
+</body>
+</html>

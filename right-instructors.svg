@@ -1,0 +1,138 @@
+<svg width="1229" height="500" viewBox="0 0 1229 500" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxM.woff2') format('woff2');
+        }
+        text {
+            font-family: 'Roboto', sans-serif;
+        }
+        .nametext{
+            font-size: 13px;
+            fill: #3E3232;
+            font-weight: 500;
+        }
+        .st9{
+            font-size: 13px;
+            fill: #3E3232;
+            fill-opacity: 0.75;
+            font-weight: 400;
+        }
+    </style>
+<rect y="103.01" width="1229" height="293.98" fill="url(#pattern0_380_700)"/>
+<rect x="131.158" y="1.43359" width="231" height="231" rx="11.5" fill="#FAFAFA"/>
+<rect x="131.158" y="1.43359" width="231" height="231" rx="11.5" stroke="#F1F1F1"/>
+<g clip-path="url(#clip0_380_700)">
+<rect x="140.658" y="10.9336" width="212" height="161" fill="url(#pattern1_380_700)"/>
+</g>
+
+<text transform="matrix(1 0 0 1 145.8049 211.8709)" class="nametext">Jon Kantner</text>
+<text transform="matrix(1 0 0 1 300.9919 209.3018)" class="st9">Designer</text>
+
+<rect x="387.158" y="1.43359" width="231" height="231" rx="11.5" fill="#FAFAFA"/>
+<rect x="387.158" y="1.43359" width="231" height="231" rx="11.5" stroke="#F1F1F1"/>
+<g clip-path="url(#clip1_380_700)">
+<rect x="396.658" y="10.9336" width="212" height="161" fill="url(#pattern2_380_700)"/>
+</g>
+
+<text transform="matrix(1 0 0 1 401.3923 209.5428)" class="nametext">Debbie LaChusa</text>
+<text transform="matrix(1 0 0 1 581.9504 209.4332)" class="st9">SEO</text>
+
+<rect x="643.158" y="1.43359" width="231" height="231" rx="11.5" fill="#FAFAFA"/>
+<rect x="643.158" y="1.43359" width="231" height="231" rx="11.5" stroke="#F1F1F1"/>
+<g clip-path="url(#clip2_380_700)">
+<rect x="652.658" y="10.9336" width="212" height="161" fill="url(#pattern3_380_700)"/>
+</g>
+
+<text transform="matrix(1 0 0 1 657.097 210.061)" class="nametext">Edwin Diaz</text>
+<text transform="matrix(1 0 0 1 804.7693 209.4334)" class="st9">Composer</text>
+
+<rect x="131.158" y="257.434" width="231" height="231" rx="11.5" fill="#FAFAFA"/>
+<rect x="131.158" y="257.434" width="231" height="231" rx="11.5" stroke="#F1F1F1"/>
+<g clip-path="url(#clip3_380_700)">
+<rect x="140.658" y="266.934" width="212" height="161" fill="url(#pattern4_380_700)"/>
+</g>
+
+<text transform="matrix(1 0 0 1 145.2029 465.7088)" class="nametext">Cassie Evans</text>
+<text transform="matrix(1 0 0 1 275.7009 465.3246)" class="st9">Photographer</text>
+
+
+<rect x="387.158" y="257.434" width="231" height="231" rx="11.5" fill="#FAFAFA"/>
+<rect x="387.158" y="257.434" width="231" height="231" rx="11.5" stroke="#F1F1F1"/>
+<g clip-path="url(#clip4_380_700)">
+<rect x="396.658" y="266.934" width="212" height="161" fill="url(#pattern5_380_700)"/>
+</g>
+
+<text transform="matrix(1 0 0 1 401.1769 465.9337)" class="nametext">Erich Andreas</text>
+<text transform="matrix(1 0 0 1 537.225 466.0501)" class="st9">Programmer</text>
+
+<rect x="643.158" y="257.434" width="231" height="231" rx="11.5" fill="#FAFAFA"/>
+<rect x="643.158" y="257.434" width="231" height="231" rx="11.5" stroke="#F1F1F1"/>
+<g clip-path="url(#clip5_380_700)">
+<rect x="652.658" y="266.934" width="212" height="161" fill="url(#pattern6_380_700)"/>
+</g>
+
+<text transform="matrix(1 0 0 1 657.1581 465.9337)" class="nametext">Jason Allen</text>
+<text transform="matrix(1 0 0 1 799.4518 465.437)" class="st9">Accounting</text>
+
+<defs>
+<pattern id="pattern0_380_700" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_380_700" transform="scale(0.000830565 0.00347222)"/>
+</pattern>
+<pattern id="pattern1_380_700" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_380_700" transform="matrix(0.000455843 0 0 0.00060024 -0.0698034 0)"/>
+</pattern>
+<pattern id="pattern2_380_700" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image2_380_700" transform="matrix(0.000455569 0 0 0.00059988 -0.0694616 0)"/>
+</pattern>
+<pattern id="pattern3_380_700" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image3_380_700" transform="matrix(0.000455569 0 0 0.00059988 -0.0694616 0)"/>
+</pattern>
+<pattern id="pattern4_380_700" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image4_380_700" transform="matrix(0.000455569 0 0 0.00059988 -0.0694616 0)"/>
+</pattern>
+<pattern id="pattern5_380_700" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image5_380_700" transform="matrix(0.0004046 0 0 0.000532765 -0.00574984 0)"/>
+</pattern>
+<pattern id="pattern6_380_700" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image6_380_700" transform="matrix(0.000296654 0 0 0.000390625 -0.0695755 0)"/>
+</pattern>
+<clipPath id="clip0_380_700">
+<rect x="140.658" y="10.9336" width="212" height="161" rx="10" fill="white"/>
+</clipPath>
+<clipPath id="clip1_380_700">
+<rect x="396.658" y="10.9336" width="212" height="161" rx="10" fill="white"/>
+</clipPath>
+<clipPath id="clip2_380_700">
+<rect x="652.658" y="10.9336" width="212" height="161" rx="10" fill="white"/>
+</clipPath>
+<clipPath id="clip3_380_700">
+<rect x="140.658" y="266.934" width="212" height="161" rx="10" fill="white"/>
+</clipPath>
+<clipPath id="clip4_380_700">
+<rect x="396.658" y="266.934" width="212" height="161" rx="10" fill="white"/>
+</clipPath>
+<clipPath id="clip5_380_700">
+<rect x="652.658" y="266.934" width="212" height="161" rx="10" fill="white"/>
+</clipPath>
+<image id="image0_380_700" width="1204" height="288" xlink:href="accets/background.png"/>
+<image id="image1_380_700" width="2500" height="1666" xlink:href="accets/instrecter1 (1).jpg"/>
+<image id="image2_380_700" width="2500" height="1667" xlink:href="accets/instrecter1 (2).jpg"/>
+<image id="image3_380_700" width="2500" height="1667" xlink:href="accets/instrecter1 (3).jpg"/>
+<image id="image4_380_700" width="2500" height="1667" xlink:href="accets/instrecter1 (4).jpg"/>
+<image id="image5_380_700" width="2500" height="1877" xlink:href="accets/instrecter1 (5).jpg"/>
+<image id="image6_380_700" width="3840" height="2560" xlink:href="accets/instrecter1 (6).jpg"/>
+</defs>
+<text transform="matrix(1 0 0 1 145.8049 211.8709)" class="st9 st10">Jon Kantner</text>
+<text transform="matrix(1 0 0 1 300.9919 209.3018)" class="st9 st11">Designer</text>
+<text transform="matrix(1 0 0 1 401.3923 209.5428)" class="st9 st10">Debbie LaChusa</text>
+<text transform="matrix(1 0 0 1 581.9504 209.4332)" class="st9 st11">SEO</text>
+<text transform="matrix(1 0 0 1 657.097 210.061)" class="st9 st10">Edwin Diaz</text>
+<text transform="matrix(1 0 0 1 657.1581 465.9337)" class="st9 st10">Jason Allen</text>
+<text transform="matrix(1 0 0 1 401.1769 465.9337)" class="st9 st10">Erich Andreas</text>
+<text transform="matrix(1 0 0 1 145.2029 465.7088)" class="st9 st10">Cassie Evans</text>
+<text transform="matrix(1 0 0 1 275.7009 465.3246)" class="st9 st11">Photographer</text>
+<text transform="matrix(1 0 0 1 537.225 466.0501)" class="st9 st11">Programmer</text>
+<text transform="matrix(1 0 0 1 799.4518 465.437)" class="st9 st11">Accounting</text>
+<text transform="matrix(1 0 0 1 804.7693 209.4334)" class="st9 st11">Composer</text>
+</svg>

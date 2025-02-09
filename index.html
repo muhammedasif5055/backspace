@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="accets/hedar-removebg-preview.png" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">Teach</a>
+                <a href="#" class="nav-link">Contact Us</a>
+                <a href="#" class="nav-link">About Us</a>
+            </div>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search anything">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <div class="mobile-header">
+            <div class="mobile-logo">
+                <img src="accets/blacklogomobile.png" alt="Logo">
+            </div>
+            <div class="close-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#" class="mobile-link">Categories</a>
+            <a href="#" class="mobile-link">Teach</a>
+            <a href="#" class="mobile-link">Contact Us</a>
+            <a href="#" class="mobile-link">About Us</a>
+        </div>
+        <div class="mobile-search">
+            <div class="search-bar">
+                <input type="text" placeholder="Search anything">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <main>
+     
+
+          <header class="banner">
+            <div class="banner-content">
+                <div class="banner-left">
+                    <h1 class="banner-heading">
+                        🙌 Hello friends<br>
+                        I am Sofia and we want to start a web design course together. Do you like it too 😍 ?
+                    </h1>
+                    <div class="banner-cta">
+                        <button class="start-button">
+                            Start course now
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="bannerflex">
+                        <div class="stats">
+                            <div class="chart">
+                                <span class="percentage">79%</span>
+                            </div>
+                           
+                        </div>
+                        <div class="stats">
+                           
+                              <img class="arrowpng" src="accets/arrows.png" alt="">
+                            
+                            <span class="booked-label">booked</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="banner-right">
+                    <img src="accets/hadderimage.png" alt="Person working on computer" class="banner-image">
+                </div>
+            </div>
+        </header>
+        <section class="container">
+            <div class="header">
+                <div class="title-section">
+                    <div class="title-rectangle"></div>
+                    <h1 class="title">New Courses</h1>
+                </div>
+                <button class="filter-icon" onclick="toggleTabs()">☰</button>
+                <div class="tabs">
+                    <div class="tab active" data-category="all">All Courses</div>
+                    <div class="tab" data-category="design">Design</div>
+                    <div class="tab" data-category="development">Development</div>
+                    <div class="tab" data-category="photography">Photography</div>
+                    <div class="tab" data-category="music">Music</div>
+                </div>
+            </div>
+    
+            <div class="courses-grid">
+                <!-- Course Cards -->
+                <div class="course-card" data-category="design" data-rating="4">
+                    <div class="course-image">
+                        <img src="accets/04.png" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <h2 class="course-title">Learn Figma - UI/UX Design Essential Training</h2>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <span>Lesson: 6</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Students: 198</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Beginner</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <div class="rating">
+                                <!-- Rating stars will be dynamically generated -->
+                            </div>
+                            <button class="start-button">Start course</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-category="design" data-rating="4">
+                    <div class="course-image">
+                        <img src="accets/10.png" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <h2 class="course-title">Learn Figma - UI/UX Design Essential Training</h2>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <span>Lesson: 6</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Students: 198</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Beginner</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <div class="rating">
+                                <!-- Rating stars will be dynamically generated -->
+                            </div>
+                            <button class="start-button">Start course</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-category="design" data-rating="4">
+                    <div class="course-image">
+                        <img src="accets/12.png" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <h2 class="course-title">Learn Figma - UI/UX Design Essential Training</h2>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <span>Lesson: 6</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Students: 198</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Beginner</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <div class="rating">
+                                <!-- Rating stars will be dynamically generated -->
+                            </div>
+                            <button class="start-button">Start course</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-category="design" data-rating="4">
+                    <div class="course-image">
+                        <img src="accets/04.png" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <h2 class="course-title">Learn Figma - UI/UX Design Essential Training</h2>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <span>Lesson: 6</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Students: 198</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Beginner</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <div class="rating">
+                                <!-- Rating stars will be dynamically generated -->
+                            </div>
+                            <button class="start-button">Start course</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-category="design" data-rating="4">
+                    <div class="course-image">
+                        <img src="accets/10.png" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <h2 class="course-title">Learn Figma - UI/UX Design Essential Training</h2>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <span>Lesson: 6</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Students: 198</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Beginner</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <div class="rating">
+                                <!-- Rating stars will be dynamically generated -->
+                            </div>
+                            <button class="start-button">Start course</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-category="design" data-rating="4">
+                    <div class="course-image">
+                        <img src="accets/17.png" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <h2 class="course-title">Learn Figma - UI/UX Design Essential Training</h2>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <span>Lesson: 6</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Students: 198</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Beginner</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <div class="rating">
+                                <!-- Rating stars will be dynamically generated -->
+                            </div>
+                            <button class="start-button">Start course</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" data-category="development" data-rating="3">
+                    <div class="course-image">
+                        <img src="accets/12.png" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <h2 class="course-title">Python for Beginners - Learn Programming from scratch</h2>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <span>Lesson: 21</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Students: 99</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Advanced</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <div class="rating">
+                                <!-- Rating stars will be dynamically generated -->
+                            </div>
+                            <button class="start-button">Start course</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="course-card" data-category="music" data-rating="5">
+                    <div class="course-image">
+                        <img src="accets/10.png" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <h2 class="course-title">Acoustic Guitar and Electric Guitar Started</h2>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <span>Lesson: 8</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Students: 301</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Average</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <div class="rating">
+                                <!-- Rating stars will be dynamically generated -->
+                            </div>
+                            <button class="start-button">Start course</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Add more course cards as needed -->
+            </div>
+        </section>
+         <!-- Curriculum Level Tabs -->
+<section class="container">
+         <div class="header">
+            <div class="title-section">
+                <div class="title-rectangle"></div>
+                <h1 class="title">New Curriculum</h1>
+            </div>
+           
+        </div> 
+  <div class="curriculum-level-tabs">
+    <div class="curriculum-tab active" data-level="beginner">
+      Beginner
+    </div>
+    <div class="curriculum-tab" data-level="intermediate">
+      Intermediate 
+    </div>
+    <div class="curriculum-tab" data-level="advanced">
+      Advanced  
+    </div>
+  </div>
+
+  <!-- Modules Grid -->
+  <div class="curriculum-modules-grid" id="modules-container">
+    <!-- Modules for Beginner Level -->
+    <div class="curriculum-module-card" data-level="beginner" data-number="1" data-title="Programming Language Fundamentals" data-duration="2 Months" data-topics="Introduction to Java, Input Output and Data Types, Operators, Conditions, Loops, Pattern Problems, Functions, 1D and 2D Arrays, Strings, Memory Management, Basic OOP">
+      <div class="curriculum-module-header">
+        <div class="curriculum-module-number">Module 1</div>
+        <h3 class="curriculum-module-title">Programming Language Fundamentals</h3>
+        <div class="curriculum-module-duration">2 Months</div>
+      </div>
+    </div>
+    <div class="curriculum-module-card" data-level="beginner" data-number="2" data-title="Data Structures and Algorithms" data-duration="4.5 Months" data-topics="Basic Data Structures, Array Problems, Searching Algorithms, Sorting Algorithms, LinkedList, Stacks & Queues, Trees & Graphs">
+      <div class="curriculum-module-header">
+        <div class="curriculum-module-number">Module 2</div>
+        <h3 class="curriculum-module-title">Data Structures and Algorithms</h3>
+        <div class="curriculum-module-duration">4.5 Months</div>
+      </div>
+    </div>
+    <div class="curriculum-module-card" data-level="beginner" data-number="3" data-title="SQL" data-duration="0.5 Month" data-topics="Database Basics, SQL Queries, CRUD Operations, Joins and Relations, Indexing">
+      <div class="curriculum-module-header">
+        <div class="curriculum-module-number">Module 3</div>
+        <h3 class="curriculum-module-title">SQL</h3>
+        <div class="curriculum-module-duration">0.5 Month</div>
+      </div>
+    </div>
+    <div class="curriculum-module-card" data-level="beginner" data-number="4" data-title="LLD and Project Specialisations" data-duration="3.5 Months" data-topics="Object-Oriented Design, Design Patterns, Clean Code, Project Architecture, Best Practices">
+      <div class="curriculum-module-header">
+        <div class="curriculum-module-number">Module 4</div>
+        <h3 class="curriculum-module-title">LLD and Project Specialisations</h3>
+        <div class="curriculum-module-duration">3.5 Months</div>
+      </div>
+    </div>
+
+    <!-- Modules for Intermediate Level -->
+    <div class="curriculum-module-card" data-level="intermediate" data-number="1" data-title="Advanced Programming" data-duration="3 Months" data-topics="Advanced OOP Concepts, Design Patterns, Clean Code Practices, Testing Methodologies, Version Control, CI/CD Pipelines">
+      <div class="curriculum-module-header">
+        <div class="curriculum-module-number">Module 1</div>
+        <h3 class="curriculum-module-title">Advanced Programming</h3>
+        <div class="curriculum-module-duration">3 Months</div>
+      </div>
+    </div>
+    <div class="curriculum-module-card" data-level="intermediate" data-number="1" data-title="Advanced Programming" data-duration="3 Months" data-topics="Advanced OOP Concepts, Design Patterns, Clean Code Practices, Testing Methodologies, Version Control, CI/CD Pipelines">
+        <div class="curriculum-module-header">
+          <div class="curriculum-module-number">Module 1</div>
+          <h3 class="curriculum-module-title">Advanced Programming</h3>
+          <div class="curriculum-module-duration">3 Months</div>
+        </div>
+      </div>
+
+    <!-- Modules for Advanced Level -->
+    <div class="curriculum-module-card" data-level="advanced" data-number="1" data-title="System Design" data-duration="4 Months" data-topics="System Architecture, Scalability, Microservices, Cloud Computing, Security, Performance Optimization">
+      <div class="curriculum-module-header">
+        <div class="curriculum-module-number">Module 1</div>
+        <h3 class="curriculum-module-title">System Design</h3>
+        <div class="curriculum-module-duration">4 Months</div>
+      </div>
+    </div>
+
+    <div class="curriculum-module-card" data-level="advanced" data-number="1" data-title="System Design" data-duration="4 Months" data-topics="System Architecture, Scalability, Microservices, Cloud Computing, Security, Performance Optimization">
+        <div class="curriculum-module-header">
+          <div class="curriculum-module-number">Module 1</div>
+          <h3 class="curriculum-module-title">System Design</h3>
+          <div class="curriculum-module-duration">4 Months</div>
+        </div>
+      </div>
+  </div>
+</section>
+  <!-- Modern Responsive Modal for Topics -->
+  <div class="curriculum-modal" id="topics-modal">
+    <div class="curriculum-modal-content">
+      <div class="curriculum-modal-close" id="modal-close-btn">&times;</div>
+      <!-- Modal Heading (Module Title) -->
+      <h2 class="curriculum-modal-heading" id="modal-title">Module Details</h2>
+      <!-- Duration -->
+      <div class="curriculum-topics-duration" id="modal-duration"></div>
+      <!-- Topics List -->
+      <ul class="curriculum-topics-list" id="modal-topics-list">
+        <!-- Topics will be injected dynamically -->
+      </ul>
+      <!-- Download Button -->
+      <div class="modal-download">
+        <a href="#" class="curriculum-download-btn">
+          <span>Download Complete Curriculum</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="root-wrapper-best-instructors">
+    <div class="left-instructors">
+        <h1 class="best-instructors">best Instructors</h1>
+        <p class="supporting-text">At the Academy, we strive to bring together the best professors for the best courses</p>
+        <div class="all-instructors">
+            <div class="button">
+                <span class="label-text">all Instructors</span>
+                <div class="v6-icon-free">
+                    <span class="icon">→</span>
+                </div>
+            </div>
+            <img src="accets/instre.png" alt="Instructor" class="instructor-image">
+        </div>
+    </div>
+    <object type="image/svg+xml" data="right-instructors.svg" class="right-instructors"></object>
+</div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
