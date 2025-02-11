@@ -1,127 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Listing</title>
+    <!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Helvetica, "Helvetica Neue", Roboto, Noto, Arial, sans-serif;
-        }
-
-        .container {
-            max-width: 1512px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .title-section {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .title-rectangle {
-            width: 4px;
-            height: 4px;
-            background: linear-gradient(-90deg, rgb(3, 253, 85), rgb(181, 255, 205));
-            border-radius: 12px;
-        }
-
-        .title {
-            color: rgb(8, 8, 8);
-            font-size: 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .tab {
-            padding: 10px 24px;
+         /* Course Card */
+         .course-card {
+            background: #fff;
             border-radius: 10px;
-            background-color: rgb(245, 245, 245);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .tab.active {
-            background-color: rgb(8, 8, 8);
-            color: white;
-        }
-
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 24px;
-            padding: 20px 0;
-        }
-
-        .course-card {
-            border: 1px solid rgb(241, 241, 241);
-            border-radius: 12px;
-            background-color: rgb(250, 250, 250);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .course-image {
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .course-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            border-radius: 10px 10px 0 0;
         }
 
         .course-content {
-            padding: 20px;
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .course-title {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 16px;
-            color: rgb(8, 8, 8);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
         }
 
         .course-info {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+            justify-content: space-between;
+            margin-bottom: 15px;
         }
 
         .info-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: rgba(8, 8, 8, 0.75);
-            font-size: 13px;
+            font-size: 0.9rem;
+            color: #555;
         }
 
         .course-actions {
@@ -130,142 +56,425 @@
             align-items: center;
         }
 
-        .rating {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: 500;
-        }
-
         .start-button {
-            background-color: rgb(8, 8, 8);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 10px;
+            background: #007bff;
+            color: #fff;
             border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
         .start-button:hover {
-            background-color: rgb(40, 40, 40);
+            background: #0056b3;
         }
 
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        /* Owl Carousel Navigation Buttons */
+        .owl-nav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
 
-            .tabs {
-                width: 100%;
-                overflow-x: auto;
-                padding-bottom: 10px;
-            }
+        .owl-nav button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
 
-            .courses-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
+        .owl-nav button:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        .owl-nav button i {
+            font-size: 1.2rem;
+        }
+
+        /* Owl Carousel Item Styling */
+        .owl-stage {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .owl-item {
+            display: flex;
+            justify-content: center;
+            flex: 1 1 auto;
+        }
+
+        .owl-item .course-card {
+            width: 100%;
+            margin: 0 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <!-- Owl Carousel 2 CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- jQuery (required for Owl Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel 2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <style>
+        /* Carousel Container */
+        .carousel-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    
+        /* Carousel Slides */
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+    
+        /* Course Card */
+        .course-card {
+            flex: 0 0 33.33%; /* Show 3 cards at a time */
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    
+        .course-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    
+        .course-content {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .course-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+    
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+    
+        .info-item {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    
+        .course-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .start-button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        .start-button:hover {
+            background: #0056b3;
+        }
+    
+        /* Navigation Buttons */
+        .carousel-nav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+            display: flex;
+            gap: 10px; /* Space between buttons */
+        }
+    
+        .nav-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .nav-button:hover {
+            background: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="title-section">
-                <div class="title-rectangle"></div>
-                <h1 class="title">new courses</h1>
+    <div class="owl-carousel owl-theme">
+        <!-- Card 1 -->
+        <div class="course-card" data-category="design" data-rating="4">
+            <div class="course-image">
+                <img src="accets/10.png" alt="Course Image">
             </div>
-            <div class="tabs">
-                <div class="tab active">all course</div>
-                <div class="tab">Design</div>
-                <div class="tab">Development</div>
-                <div class="tab">Photography</div>
-                <div class="tab">Music</div>
-            </div>
-        </div>
-
-        <div class="courses-grid">
-            <!-- Courses will be dynamically inserted here -->
-        </div>
-    </div>
-
-    <script>
-        // Course data
-        const courses = [
-            {
-                title: "Learn Figma - UI/UX Design Essential Training",
-                image: "/api/placeholder/340/240",
-                lessons: 6,
-                students: 198,
-                level: "Beginner",
-                rating: 4
-            },
-            {
-                title: "Python for Beginners - Learn Programming from scratch",
-                image: "/api/placeholder/340/240",
-                lessons: 21,
-                students: 99,
-                level: "Advanced",
-                rating: 3
-            },
-            {
-                title: "Acoustic Guitar and Electric Guitar Started",
-                image: "/api/placeholder/340/240",
-                lessons: 8,
-                students: 301,
-                level: "Average",
-                rating: 5
-            },
-            // Add more courses as needed
-        ];
-
-        // Function to create course cards
-        function createCourseCard(course) {
-            return `
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="${course.image}" alt="${course.title}">
+            <div class="course-content">
+                <h2 class="course-title">Learn Figma - UI/UX Design Essential Training</h2>
+                <div class="course-info">
+                    <div class="info-item">
+                        <span>Lesson: 6</span>
                     </div>
-                    <div class="course-content">
-                        <h2 class="course-title">${course.title}</h2>
-                        <div class="course-info">
-                            <div class="info-item">
-                                <span>Lesson: ${course.lessons}</span>
-                            </div>
-                            <div class="info-item">
-                                <span>Students: ${course.students}</span>
-                            </div>
-                            <div class="info-item">
-                                <span>${course.level}</span>
-                            </div>
-                        </div>
-                        <div class="course-actions">
-                            <div class="rating">
-                                ${course.rating}/5 ★
-                            </div>
-                            <button class="start-button">Start course</button>
-                        </div>
+                    <div class="info-item">
+                        <span>Students: 198</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Beginner</span>
                     </div>
                 </div>
-            `;
-        }
-
-        // Render courses
-        const coursesGrid = document.querySelector('.courses-grid');
-        courses.forEach(course => {
-            coursesGrid.innerHTML += createCourseCard(course);
-        });
-
-        // Tab functionality
-        const tabs = document.querySelectorAll('.tab');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                tabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                // Here you could filter courses based on category
+                <div class="course-actions">
+                    <div class="rating">
+                        <!-- Rating stars will be dynamically generated -->
+                    </div>
+                    <button class="start-button">Start course</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="course-card" data-category="development" data-rating="5">
+            <div class="course-image">
+                <img src="accets/11.png" alt="Course Image">
+            </div>
+            <div class="course-content">
+                <h2 class="course-title">Learn React - Frontend Development</h2>
+                <div class="course-info">
+                    <div class="info-item">
+                        <span>Lesson: 10</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Students: 300</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <div class="rating">
+                        <!-- Rating stars will be dynamically generated -->
+                    </div>
+                    <button class="start-button">Start course</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="course-card" data-category="design" data-rating="3">
+            <div class="course-image">
+                <img src="accets/12.png" alt="Course Image">
+            </div>
+            <div class="course-content">
+                <h2 class="course-title">Learn Adobe XD - UI/UX Design</h2>
+                <div class="course-info">
+                    <div class="info-item">
+                        <span>Lesson: 8</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Students: 150</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Beginner</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <div class="rating">
+                        <!-- Rating stars will be dynamically generated -->
+                    </div>
+                    <button class="start-button">Start course</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="course-card" data-category="development" data-rating="4">
+            <div class="course-image">
+                <img src="accets/13.png" alt="Course Image">
+            </div>
+            <div class="course-content">
+                <h2 class="course-title">Learn Node.js - Backend Development</h2>
+                <div class="course-info">
+                    <div class="info-item">
+                        <span>Lesson: 12</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Students: 250</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <div class="rating">
+                        <!-- Rating stars will be dynamically generated -->
+                    </div>
+                    <button class="start-button">Start course</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="course-card" data-category="marketing" data-rating="5">
+            <div class="course-image">
+                <img src="accets/14.png" alt="Course Image">
+            </div>
+            <div class="course-content">
+                <h2 class="course-title">Learn Digital Marketing</h2>
+                <div class="course-info">
+                    <div class="info-item">
+                        <span>Lesson: 15</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Students: 400</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Advanced</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <div class="rating">
+                        <!-- Rating stars will be dynamically generated -->
+                    </div>
+                    <button class="start-button">Start course</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 6 -->
+        <div class="course-card" data-category="design" data-rating="4">
+            <div class="course-image">
+                <img src="accets/15.png" alt="Course Image">
+            </div>
+            <div class="course-content">
+                <h2 class="course-title">Learn Photoshop - Graphic Design</h2>
+                <div class="course-info">
+                    <div class="info-item">
+                        <span>Lesson: 7</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Students: 180</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Beginner</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <div class="rating">
+                        <!-- Rating stars will be dynamically generated -->
+                    </div>
+                    <button class="start-button">Start course</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 7 -->
+        <div class="course-card" data-category="development" data-rating="5">
+            <div class="course-image">
+                <img src="accets/16.png" alt="Course Image">
+            </div>
+            <div class="course-content">
+                <h2 class="course-title">Learn Python - Programming Basics</h2>
+                <div class="course-info">
+                    <div class="info-item">
+                        <span>Lesson: 9</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Students: 320</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Beginner</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <div class="rating">
+                        <!-- Rating stars will be dynamically generated -->
+                    </div>
+                    <button class="start-button">Start course</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 8 -->
+        <div class="course-card" data-category="marketing" data-rating="4">
+            <div class="course-image">
+                <img src="accets/17.png" alt="Course Image">
+            </div>
+            <div class="course-content">
+                <h2 class="course-title">Learn SEO - Search Engine Optimization</h2>
+                <div class="course-info">
+                    <div class="info-item">
+                        <span>Lesson: 10</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Students: 280</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <div class="rating">
+                        <!-- Rating stars will be dynamically generated -->
+                    </div>
+                    <button class="start-button">Start course</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+          $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true
+                    }
+                },
+                nav: true,
+                navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+                dots: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true
             });
         });
     </script>

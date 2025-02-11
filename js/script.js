@@ -325,3 +325,99 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             frating.innerHTML = stars;
         });
+
+
+         // Animate progress bars when they come into view
+    function animateProgressBars() {
+        const progressBars = document.querySelectorAll('.your-progress-fill');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const progress = entry.target.getAttribute('data-progress');
+              entry.target.style.width = `${progress}%`; // Set the width based on the progress
+            }
+          });
+        }, { threshold: 0.1 });
+  
+        progressBars.forEach(bar => {
+          observer.observe(bar);
+        });
+      }
+  
+      // Initialize animations
+      document.addEventListener('DOMContentLoaded', () => {
+        animateProgressBars();
+  
+        // Add click handlers for buttons
+        document.querySelectorAll('.your-continue-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            alert('Continuing to course...');
+          });
+        });
+  
+        document.querySelector('.your-see-all').addEventListener('click', () => {
+          const hiddenCards = document.querySelectorAll('.hidden-mobile');
+          hiddenCards.forEach(card => {
+            card.style.display = card.style.display === 'flex' ? 'none' : 'flex';
+          });
+        });
+      });
+
+
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 15,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                550:{
+                  items: 2,
+                    nav: true
+                },
+                768: {
+                    items: 3,
+                    nav: true
+                },
+                1024: {
+                    items: 4,
+                    nav: true
+                }
+            },
+            nav: true,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            dots: false,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true
+        });
+        // Generate rating stars dynamically
+        function initializeRatings() {
+            const fratings = document.querySelectorAll('.rating');
+            fratings.forEach(frating => {
+                const card = frating.closest('.course-card');
+                const ratingValue = parseFloat(card.getAttribute('data-rating'));
+                let stars = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= ratingValue) {
+                        stars += '★';
+                    } else {
+                        stars += '☆';
+                    }
+                }
+                frating.innerHTML = stars;
+            });
+        }
+
+        // Call the rating initialization after carousel is initialized
+        initializeRatings();
+
+        // Reinitialize ratings when carousel changes
+        $('.owl-carousel').on('changed.owl.carousel', function(event) {
+            setTimeout(initializeRatings, 0);
+        });
+    });

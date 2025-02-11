@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, "Helvetica Neue", Roboto, Noto, Arial, sans-serif;
+        }
+
+        .footer-root-wrapper {
+            width: 100%;
+            max-width: 1492px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .footer-top {
+            background-color: rgb(245, 242, 250);
+            border-radius: 40px;
+            padding: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-supporting-text {
+            color: rgb(8, 8, 8);
+            font-size: 14px;
+            line-height: 30px;
+            max-width: 1102px;
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .footer-logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo-section a {
+            display: inline-block;
+        }
+
+        .footer-logo-section img {
+            max-height: 6rem;
+            width: auto;
+        }
+
+        .footer-center {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section-title {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .footer-section-title::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: rgb(3, 253, 85);
+            border-radius: 12px;
+        }
+
+        .footer-certificate-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .footer-categories-list,
+        .footer-quick-access-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-menu-item {
+            display: block;
+            color: rgba(8, 8, 8, 0.75);
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-menu-item:hover {
+            color: rgb(3, 253, 85);
+        }
+
+        .footer-comments-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-comment {
+            background-color: rgb(245, 245, 245);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .footer-comment-header {
+            color: rgb(62, 50, 50);
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .footer-comment-subhead {
+            color: rgba(62, 50, 50, 0.75);
+            font-size: 12px;
+        }
+
+        .footer-bottom {
+            background-color: rgb(245, 245, 245);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom a {
+            color: rgba(62, 50, 50, 0.75);
+            font-size: 12px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: rgb(3, 253, 85);
+        }
+
+        @media (max-width: 1200px) {
+            .footer-center {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-center {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .footer-supporting-text {
+                font-size: 13px;
+                line-height: 24px;
+            }
+
+         
+
+            .footer-top {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-supporting-text {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="footer-root-wrapper">
+        <footer>
+            <div class="footer-top">
+                <p class="footer-supporting-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium
+                </p>
+                <div class="footer-logo-section">
+                    <a href="/">
+                        <img src="accets/fotterimg.png" alt="Company Logo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <div class="footer-certificate-section">
+                    <div class="footer-section-title">Membership Certificate</div>
+                    <a href="/certificate">
+                        <img src="accets/certificatpng.png" alt="Certificate">
+                    </a>
+                </div>
+
+                <div class="footer-categories-section">
+                    <div class="footer-section-title">Categories</div>
+                    <nav class="footer-categories-list">
+                        <a href="/designing" class="footer-menu-item">Designing</a>
+                        <a href="/programming" class="footer-menu-item">Programming</a>
+                        <a href="/graphics" class="footer-menu-item">Graphics</a>
+                        <a href="/frontend" class="footer-menu-item">Front End</a>
+                        <a href="/composition" class="footer-menu-item">Composition</a>
+                        <a href="/tailoring" class="footer-menu-item">Tailoring</a>
+                        <a href="/database" class="footer-menu-item">Database</a>
+                        <a href="/sport" class="footer-menu-item">Sport</a>
+                        <a href="/cooking" class="footer-menu-item">Cooking</a>
+                        <a href="/driving" class="footer-menu-item">Driving</a>
+                        <a href="/photography" class="footer-menu-item">Photography</a>
+                        <a href="/camerawork" class="footer-menu-item">Camerawork</a>
+                    </nav>
+                </div>
+
+                <div class="footer-quick-access-section">
+                    <div class="footer-section-title">Quick Access</div>
+                    <nav class="footer-quick-access-list">
+                        <a href="/what-we-offer" class="footer-menu-item">What We Offer</a>
+                        <a href="/careers" class="footer-menu-item">Careers</a>
+                        <a href="/leadership" class="footer-menu-item">Leadership</a>
+                        <a href="/about" class="footer-menu-item">About</a>
+                        <a href="/catalog" class="footer-menu-item">Catalog</a>
+                        <a href="/degrees" class="footer-menu-item">Degrees</a>
+                        <a href="/enterprise" class="footer-menu-item">For Enterprise</a>
+                        <a href="/government" class="footer-menu-item">For Government</a>
+                        <a href="/campus" class="footer-menu-item">For Campus</a>
+                        <a href="/partner" class="footer-menu-item">Become a Partner</a>
+                        <a href="/terms" class="footer-menu-item">Terms</a>
+                        <a href="/accessibility" class="footer-menu-item">Accessibility</a>
+                    </nav>
+                </div>
+
+                <div class="footer-comments-section">
+                    <div class="footer-section-title">New Comments</div>
+                    <div class="footer-comment">
+                        <div class="footer-comment-header">ellsmartx</div>
+                        <div class="footer-comment-subhead">how nice does this look 😍 I feel it should be delicious, thank you</div>
+                    </div>
+                    <div class="footer-comment">
+                        <div class="footer-comment-header">cassia</div>
+                        <div class="footer-comment-subhead">Take a rest, i'll be cheer up you again in 2 next game go go go</div>
+                    </div>
+                    <div class="footer-comment">
+                        <div class="footer-comment-header">amanda</div>
+                        <div class="footer-comment-subhead">you were stunning today, jan! 💗 great match 👍🏽👍🏽</div>
+                    </div>
+                    <div class="footer-comment">
+                        <div class="footer-comment-header">Denis Simonassi</div>
+                        <div class="footer-comment-subhead">It was a great match today Janzi! You did great😉🇩🇪</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    <a href="/privacy">privacy policy</a> | 
+                    <a href="/terms">terms & conditions</a>
+                </div>
+                <div>
+                    <a href="/copyright">all copyright (c) 2022 reserved</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
